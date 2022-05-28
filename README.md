@@ -26,7 +26,54 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-<h1 align="center">First of all, you need to clone the repository and download the quickstart of prisma and generate a local database.</h1>
+<h1 align="center"> About Project</h1>
+
+<p align="center"> In this project you can:</p>
+
+<ul align="center">
+  <li>
+    <strong>Create an account</strong>
+    <span>&#10004;</span>
+  </li>
+
+  <li>
+    <strong>Change some data at an account</strong>
+    <span>&#10060;</span>
+  </li>
+  
+  <li>
+    <strong>Delete some data at an account</strong>
+    <span>&#10060;</span>
+  </li>
+  
+  <li>
+    <strong>Make a deposit</strong>
+    <span>&#10060;</span>
+  </li>
+  
+  <li>
+    <strong>Get Account Balance</strong>
+    <span>&#10060;</span>
+  </li>
+  
+  <li>
+    <strong>Get Statement</strong>
+    <span>&#10060;</span>
+  </li>
+  
+  <li>
+    <strong>Transfer amount between two accounts</strong>
+    <span>&#10060;</span>
+  </li>
+  
+  <li>
+    <strong>Make a withdraw</strong>
+    <span>&#10060;</span>
+  </li>
+</ul>
+
+<p align="center">OBS: Some things i still development.</p>
+
 
 ## Installation
 
