@@ -30,7 +30,7 @@
 
 <p align="center"> In this project you can:</p>
 
-<ul align="center">
+<ul align="center" style="list-style: none;">
   <li>
     <strong>Create an account</strong>
     <span>&#10004;</span>
