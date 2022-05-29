@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Header, Headers } from '@nestjs/common';
 import { AccountService } from './account.service';
 import { CreateAccountDto } from './dto/create-account.dto';
 import { UpdateAccountDto } from './dto/update-account.dto';
@@ -21,6 +21,13 @@ export class AccountController {
   @Get()
   findAll() {
     return this.accountService.findAll();
+  }
+
+  @Get('balance')
+  async findBalance(@Headers() header) {
+    const { accountid } = header;
+    const { balance_value, credit_value } = await this.accountService.findOne(accountid);
+    return { balance_value, credit_value };
   }
 
   @Get(':id')

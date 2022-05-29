@@ -41,6 +41,11 @@ export class TransactionsController {
     return this.transactionsService.findOne(+id);
   }
 
+  @Get(':accountId/statement')
+  findByAccount(@Param('accountId') accountId: string) {
+    return this.transactionsService.findAll(accountId);
+  }
+
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateTransactionDto: UpdateTransactionDto) {
     return this.transactionsService.update(+id, updateTransactionDto);

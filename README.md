@@ -53,7 +53,7 @@
   
   <li>
     <strong>Get Account Balance</strong>
-    <span>&#10060;</span>
+    <span>&#10004;</span>
   </li>
   
   <li>
