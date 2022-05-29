@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, BadRequestException, UnauthorizedException } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, BadRequestException, UnauthorizedException, Headers } from '@nestjs/common';
 import { TransactionsService } from './transactions.service';
 import { CreateTransactionDto } from './dto/create-transaction.dto';
 import { UpdateTransactionDto } from './dto/update-transaction.dto';
@@ -34,6 +34,13 @@ export class TransactionsController {
   @Get()
   findAll() {
     return this.transactionsService.findAll();
+  }
+
+  @Get('statement')
+  findStatement(@Headers() { accountid }) {
+    if (accountid) return this.transactionsService.findAll(accountid);
+
+    return new BadRequestException('Conta inválida');
   }
 
   @Get(':id')

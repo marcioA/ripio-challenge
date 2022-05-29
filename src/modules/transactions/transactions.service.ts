@@ -8,8 +8,10 @@ const transaction_prisma_connection = prisma.transactions;
 
 @Injectable()
 export class TransactionsService {
-  create(createTransactionDto: CreateTransactionDto) {
-    return 'This action adds a new transaction';
+  async create(createTransactionDto: CreateTransactionDto) {
+    return await transaction_prisma_connection.create({
+      data: { ...createTransactionDto }
+    })
   }
 
   async findAll(accountId?: string) {
