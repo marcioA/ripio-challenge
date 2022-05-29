@@ -28,9 +28,9 @@
 
 <h1 align="center"> About Project</h1>
 
-<p align="center"> In this project you can:</p>
+<p align="center"><strong>In this project you can:</strong></p>
 
-<ul align="center" style="list-style: none;">
+<ul align="center">
   <li>
     <strong>Create an account</strong>
     <span>&#10004;</span>
@@ -48,7 +48,7 @@
   
   <li>
     <strong>Make a deposit</strong>
-    <span>&#10060;</span>
+    <span>&#10004;</span>
   </li>
   
   <li>
@@ -68,11 +68,11 @@
   
   <li>
     <strong>Make a withdraw</strong>
-    <span>&#10060;</span>
+    <span>&#10004;</span>
   </li>
 </ul>
 
-<p align="center">OBS: Some things i still development.</p>
+<p align="center">OBS: Some things i still developing.</p>
 
 
 ## Installation

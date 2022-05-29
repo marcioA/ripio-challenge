@@ -5,11 +5,17 @@ import { UpdateAccountDto } from './dto/update-account.dto';
 
 @Controller('account')
 export class AccountController {
-  constructor(private readonly accountService: AccountService) {}
+  constructor(private readonly accountService: AccountService) { }
+
+  /**
+   * 
+   * @param createAccountDto 
+   * @returns 
+   */
 
   @Post()
-  create(@Body() createAccountDto: CreateAccountDto) {
-    return this.accountService.create(createAccountDto);
+  async create(@Body() createAccountDto: CreateAccountDto) {
+    return await this.accountService.create(createAccountDto);
   }
 
   @Get()
@@ -19,16 +25,16 @@ export class AccountController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.accountService.findOne(+id);
+    return this.accountService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateAccountDto: UpdateAccountDto) {
-    return this.accountService.update(+id, updateAccountDto);
+    return this.accountService.update(id, updateAccountDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.accountService.remove(+id);
+    return this.accountService.remove(id);
   }
 }
